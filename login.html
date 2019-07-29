@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap if...else...if</title>
+</head>
+<body>
+<script>
+    let Name = prompt("Who are you???",'');
+    if(Name == 'Admin'){
+        let Pass = prompt("Password: ",'');
+        if(Pass == 'theMaster')
+            alert("Welcome!!!!");
+        else if(Pass == null)
+            alert("Canceled!!!!");
+        else
+            alert("Wrong password");
+    }
+    else if(Name == null)
+        alert("Canceled!!!");
+    else
+        alert("I don't know you!!!!");
+</script>
+</body>
+</html>
