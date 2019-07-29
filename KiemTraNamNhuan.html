@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nam nhuan</title>
+</head>
+<body>
+<script>
+    let inputNam = prompt("Nam can check: ");
+    let Nam = parseInt(inputNam);
+    let check = false;
+    if(Nam % 4 == 0 && Nam % 100 != 0)
+        check = true;
+    if (Nam % 400 == 0)
+    check = true;
+    if(check)
+        alert("Nam nay la nam nhuan!!!!!!!!!!");
+    else
+        alert("Nam nay khong phai la nam nhuan!!!!!!!!!!");
+</script>
+</body>
+</html>
