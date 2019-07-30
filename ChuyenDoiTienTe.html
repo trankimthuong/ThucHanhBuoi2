@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen tien te!!!!!!!!</title>
+    <script>
+        function getAmount() {
+            return parseFloat(document.getElementById("inputMoney").value);
+            //return document.getElementById("inputMoney").value;
+        }
+        function caseTranfer(){
+            var d = document.getElementById("Tranfer");
+            var displayTranfer = d.options[d.selectedIndex].text;
+            if(displayTranfer == 'VND--->USD'){
+                return 1;
+            }
+            else{
+                return 2;
+            }
+        }
+        function test1() {
+           var input1 = getAmount();
+           var check = caseTranfer();
+           var output1;
+           if(check == 1){
+               output1 = input1 / 23000;
+           }
+           else{
+               output1 = input1 *23000;
+           }
+           document.getElementById("outputMoney").value = output1;
+        }
+    </script>
+</head>
+<body>
+<center>
+    <h1>Amount</h1>
+    <input type="text" id="inputMoney"/>
+    <h1>From--->to</h1>
+    <select type="text" id="Tranfer" onchange="caseTranfer();">
+    <option>VND--->USD</option>
+        <option>USD--->VND</option>
+    </select>
+    <h1>Result</h1>
+    <input type="text" id="outputMoney"/>
+    <button type="text" onclick="test1();">Convert</button>
+</center>
+</body>
+</html>
