@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+    <script>
+        function getNumber1() {
+            return parseFloat(document.getElementById("number1").value);
+        }
+        function getNumber2() {
+            return parseFloat(document.getElementById("number2").value);
+        }
+        function addition() {
+            var a = getNumber1();
+            var b = getNumber2();
+            document.getElementById("result").innerHTML = "Result Addition: " + (a + b);
+        }
+        function subtraction() {
+            var a = getNumber1();
+            var b = getNumber2();
+            document.getElementById("result").innerHTML = "Result Subtraction: " + (a - b);
+        }
+        function multiplication() {
+            var a = getNumber1();
+            var b = getNumber2();
+            document.getElementById("result").innerHTML = "Result Multiplication: " + (a * b);
+        }
+        function division() {
+            var a = getNumber1();
+            var b = getNumber2();
+            document.getElementById("result").innerHTML = "Result Division: " + (a / b);
+        }
+    </script>
+</head>
+<body>
+<h1>Caculator</h1>
+<input type="text" id="number1"/>
+<input type="text" id="number2"/>
+<br><br>
+<button onclick="addition();">Addition(+)</button>
+<button onclick="subtraction();">Subtraction(-)</button>
+<button onclick="multiplication();">Multiplication(*)</button>
+<button onclick="division();">Division(/)</button>
+<div id="result"></div>
+</body>
+</html>
